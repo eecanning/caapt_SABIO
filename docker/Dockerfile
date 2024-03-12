@@ -8,14 +8,14 @@ WORKDIR /app
 
 # Install python dependencies in /app
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip3 install --progress-bar off -r requirements.txt
 
 # Copy all other files
 COPY . .
 
 # Environment variables
 ENV LIMIT_REQUIRES_LINE=8190
-ENV LOG_LEVEL=critical
+ENV LOG_LEVEL=warning
 ENV PORT=8080
 ENV SCRIPT_NAME=/api/v1/
 ENV TIMEOUT=600
