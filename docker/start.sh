@@ -3,7 +3,7 @@ echo "Starting Sabio Server"
 
 # Set missing environment variables to default values
 : "${LIMIT_REQUIRES_LINE:=8190}"
-: "${LOG_LEVEL:=critical}"
+: "${LOG_LEVEL:=warning}"
 : "${PORT:=8080}"
 : "${SCRIPT_NAME:=/api/v1/}"
 : "${TIMEOUT:=600}"
